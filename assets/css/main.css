@@ -2057,9 +2057,9 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #222629 url("images/overlay.png");
+		background: #9aa6b2 url("images/darkcover.jpg");
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
-		color: #fff;
+		color: #f5fafa;
 		height: 100%;
 		left: 0;
 		overflow-y: auto;
@@ -2259,19 +2259,19 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-image: url("../../images/bgblue.jpg");
 			}
 
 			#main > section.two {
-				background-color: #f5fafa;
+				background-color: #3a506b;
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: #3a506b;
 			}
 
 			#main > section.four {
-				background-color: #e8edec;
+				background-color: #3a506b;
 			}
 
 /* Wide */
