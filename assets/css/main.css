@@ -1755,14 +1755,14 @@ input, select, textarea {
 		}
 
 		.image.avatar48 {
-			width: 48px;
-			height: 48px;
+			width: 40px;
+			height: 40px;
 			background: #f00;
 		}
 
 			.image.avatar48 img {
-				width: 48px;
-				height: 48px;
+				width: 40px;
+				height: 40px;
 			}
 
 		.image.avatar49 {
@@ -2762,3 +2762,107 @@ input, select, textarea {
   margin-top: 5.5rem;   /* push greeting lower */
 }
 
+.about-left footer {
+  margin-top: 1.5rem;
+  text-align: margin-left;
+}
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center content in column */
+}
+
+.about-left .image {
+  margin-bottom: 0.5rem; /* small gap below photo */
+}
+
+.about-left .about-btn {
+  margin-top: 0;         /* remove big spacing */
+  width: 100%;
+  max-width: 320px;      /* same as photo width */
+  text-align: center;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-left .image {
+  margin-bottom: 1rem;   /* creates space below photo */
+  display: block;        /* ensure it behaves like a block element */
+}
+
+.about-left footer {
+  margin-top: 15;         /* remove extra space */
+  width: 100%;
+  max-width: 320px;      /* same as photo */
+  text-align: center;
+}
+/* Stack photo and button with a fixed gap */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;                 /* ⬅️ forces space between photo and button */
+}
+
+/* Ensure the image is a block (prevents overlap) */
+.about-left .image,
+.about-left .image img {
+  display: block;
+}
+
+/* Optional: lock the visual width so the button can match it */
+.about-left .image { max-width: 320px; }
+.about-left .image img { width: 100%; height: auto; border-radius: 10px; }
+
+/* Button container and width */
+.about-left .about-btn { 
+  align-self: stretch;       /* let it take same width as image */
+  clear: both;               /* ⬅️ kill any float effects from theme */
+}
+
+.about-left .about-btn .button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;                 /* no negative/extra margins */
+  position: static;          /* ensure it doesn't float over the image */
+}
+/* --- Force photo above button with no overlap --- */
+.about-left {
+  display: grid;                 /* grid avoids float/margin shenanigans */
+  grid-auto-rows: max-content;
+  justify-items: center;
+  row-gap: 14px;                 /* space between photo and button */
+}
+
+.about-left .image {
+  float: none !important;        /* in case the theme floats images */
+  margin: 0 !important;
+  display: block !important;
+  max-width: 320px;              /* keep consistent width */
+}
+
+.about-left .image img {
+  display: block !important;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-left .about-btn {
+  float: none !important;        /* ensure it doesn't wrap around the image */
+  clear: both !important;        /* drop below any floated content */
+  width: 100%;
+  max-width: 320px;              /* match image width */
+}
+
+.about-left .about-btn .button {
+  display: block;
+  width: 100%;
+  margin: 0;                     /* no extra offset */
+  position: static !important;   /* prevent overlay by any relative/absolute */
+}
