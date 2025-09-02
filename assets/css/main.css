@@ -84,7 +84,7 @@ input, select, textarea {
 
 	body {
 		background: #fff;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Space Grotesk', sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
@@ -103,7 +103,7 @@ input, select, textarea {
 		}
 
 	input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
@@ -1769,6 +1769,7 @@ input, select, textarea {
 			width: 300px;
 			height: 300px;
 			background: #f00;
+			#background-position: padding-top;
 		}
 
 			.image.avatar49 img {
@@ -2057,9 +2058,9 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #9aa6b2 url("images/darkcover.jpg");
+		background: #696969 url("images/darkcover.jpg");
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
-		color: #f5fafa;
+		color: #262626;
 		height: 100%;
 		left: 0;
 		overflow-y: auto;
@@ -2258,8 +2259,8 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #81918E;
-				background-image: url("../../images/bgblue.jpg");
+				background-color: #3a506b;
+				/*background-image: url("../../images/bgblue.jpg");*/
 			}
 
 			#main > section.two {
@@ -2642,3 +2643,122 @@ input, select, textarea {
 				}
 
 	}
+	.projects-grid .item {
+  margin: 0;
+  padding: 0;
+  box-shadow: none; /* optional: removes shadow */
+}
+
+.projects-grid .image.fit img {
+  width: 105%;
+  height: 300px;   /* adjust height as needed */
+  object-fit: cover; /* ensures image fills card */
+  border-radius: 8px; /* optional for clean corners */
+}
+.projects-grid .item header {
+  background: #3a506b; /* same as section background */
+  color: whitesmoke;   /* ensure text is readable */
+  border: none;
+}
+#top p {
+  margin-bottom: 1em;   /* was 2em */
+  line-height: 1.5em;   /* was 1.75em */
+  font-size: 20px;      /* keep readable */
+  color: whitesmoke;    /* ensure visibility */
+  text-align: justify;
+}
+/* Flex split for About section */
+.about-split {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  text-align: left;
+}
+
+/* Left column (fixed width) */
+.about-left {
+  flex: 0 0 300px;  /* keep photo + title compact */
+  text-align: left;
+}
+
+/* Right column (takes remaining width) */
+.about-right {
+  flex: 1;
+  text-align: left;
+  color: whitesmoke;
+}
+
+/* Tighter paragraph spacing */
+.about-right p {
+  margin-bottom: 1em;
+  line-height: 1.6em;
+  font-size: 20px;
+  text-align: justify;
+}
+
+/* About photo */
+.about-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 960px) {
+  .about-split {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-left, .about-right {
+    flex: none;
+    width: 100%;
+  }
+  .about-right p {
+    text-align: justify;
+  }
+}
+/* --- About section: left photo + right text --- */
+#top .container {               /* kill global centering */
+  text-align: left;
+}
+
+#top .about-split {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+#top .about-left {              /* column sizes */
+  flex: 0 0 320px;
+}
+
+#top .about-right {
+  flex: 1 1 auto;
+  color: whitesmoke;
+}
+
+#top .about-right p {
+  margin-bottom: 1em;
+  line-height: 1.55em;
+  font-size: 20px;
+  text-align: justify;
+}
+
+#top .about-left .image img {   /* tidy photo */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* mobile: stack */
+@media (max-width: 960px) {
+  #top .about-split { flex-direction: column; align-items: center; }
+  #top .about-left, #top .about-right { flex: none; width: 100%; }
+}
+.about-right h2.alt {
+  margin-top: 5.5rem;   /* push greeting lower */
+}
+
